@@ -415,6 +415,7 @@ GameObject:
   - component: {fileID: 1458555076}
   - component: {fileID: 1458555075}
   - component: {fileID: 1458555079}
+  - component: {fileID: 1458555080}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -537,6 +538,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1458555080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458555074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d33e8b19959f824c88bce44186ba1b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
 --- !u!1 &1973042318
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +564,7 @@ GameObject:
   - component: {fileID: 1973042320}
   - component: {fileID: 1973042319}
   - component: {fileID: 1973042323}
+  - component: {fileID: 1973042324}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -670,6 +685,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1973042324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973042318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d33e8b19959f824c88bce44186ba1b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
 --- !u!1 &2064682023
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,6 +804,8 @@ GameObject:
   - component: {fileID: 2095372840}
   - component: {fileID: 2095372839}
   - component: {fileID: 2095372843}
+  - component: {fileID: 2095372844}
+  - component: {fileID: 2095372845}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -896,6 +926,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2095372844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095372838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d33e8b19959f824c88bce44186ba1b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
+--- !u!114 &2095372845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095372838}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d33e8b19959f824c88bce44186ba1b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
