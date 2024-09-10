@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "D:\\Unity\\Projects\\Unity_learning\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|d:\\unity\\projects\\unity_learning\\assets\\idgenerater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|d:\\unity\\projects\\unity_learning\\assets\\gravitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|solutionrelative:assets\\gravitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|D:\\Unity\\Projects\\Unity_learning\\assets\\idgenerater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|solutionrelative:assets\\idgenerater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GravityController.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Assets\\GravityController.cs",
+              "RelativeDocumentMoniker": "Assets\\GravityController.cs",
+              "ToolTip": "D:\\Unity\\Projects\\Unity_learning\\Assets\\GravityController.cs",
+              "RelativeToolTip": "Assets\\GravityController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T04:41:27.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "IDGenerater.cs",
               "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Assets\\IDGenerater.cs",
               "RelativeDocumentMoniker": "Assets\\IDGenerater.cs",
@@ -30,12 +47,11 @@
               "RelativeToolTip": "Assets\\IDGenerater.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T03:37:56.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-10T03:37:56.107Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "NewBehaviourScript.cs",
               "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Assets\\NewBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\NewBehaviourScript.cs",
