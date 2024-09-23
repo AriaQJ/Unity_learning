@@ -2,6 +2,14 @@ Library\Bee\artifacts\mvdfrm\Unity.EditorCoroutines.Editor.ref.dll_34ED10A34098B
 Library\Bee\artifacts\mvdfrm\Unity.Performance.Profile-Analyzer.Editor.ref.dll_65A192712782EB2B.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.PlasticSCM.Editor.ref.dll_257AEB342BE77856.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Rider.Editor.ref.dll_9B5591808ABA37AF.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Robotics.ROSTCPConnector.Editor.ref.dll_5F34F006DCFC2890.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Robotics.ROSTCPConnector.MessageGeneration.ref.dll_496A0312B1D47232.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Robotics.ROSTCPConnector.Messages.ref.dll_60860347456E667F.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Robotics.ROSTCPConnector.ref.dll_185151FE8BB59D31.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Robotics.UrdfImporter.Editor.ref.dll_85E0E7B4A86D0689.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Robotics.UrdfImporter.ref.dll_6A1133D81438F3A8.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Robotics.Visualizations.Editor.ref.dll_E954CC115732C70B.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Robotics.Visualizations.ref.dll_A5D8CDB574409306.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.ref.dll_D3B9364D6FB03093.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.ref.dll_E668CD773429A040.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TestTools.CodeCoverage.Editor.ref.dll_F09CF4826CE11CD9.mvfrm
