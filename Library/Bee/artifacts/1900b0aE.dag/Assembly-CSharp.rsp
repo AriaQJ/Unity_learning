@@ -365,6 +365,7 @@
 -analyzer:"D:/Unity/Hub/Editor/2022.3.45f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/GravityController.cs"
 "Assets/IDGenerater.cs"
+"Assets/scripts/JointSliderController.cs"
 -langversion:9.0
 /deterministic
 /optimize+

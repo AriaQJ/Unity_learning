@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\GravityController.cs" />
     <Compile Include="Assets\IDGenerater.cs" />
+    <Compile Include="Assets\scripts\JointSliderController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\robots\URDF\niryo_one\niryo_one_urdf\CMakeLists.txt" />
