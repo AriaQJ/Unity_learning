@@ -64,6 +64,10 @@
     <Compile Include="Assets\IDGenerater.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\robots\URDF\niryo_one\niryo_one_urdf\CMakeLists.txt" />
+    <None Include="Assets\robots\URDF\niryo_one\niryo_one_urdf\package.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>D:\Unity\Hub\Editor\2022.3.45f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
       <Private>False</Private>
