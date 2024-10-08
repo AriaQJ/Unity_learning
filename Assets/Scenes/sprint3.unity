@@ -5383,7 +5383,7 @@ ArticulationBody:
   m_Enabled: 1
   serializedVersion: 5
   m_Mass: 1.219
-  m_ParentAnchorPosition: {x: 1.7763573e-15, y: 0.13330008, z: -0.39220008}
+  m_ParentAnchorPosition: {x: -0.000000014901165, y: 0.13330008, z: -0.39220008}
   m_ParentAnchorRotation: {x: 0, y: 0, z: -0.7071069, w: 0.7071069}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
@@ -5733,7 +5733,7 @@ Transform:
   m_GameObject: {fileID: 1149553364}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.261, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5760,13 +5760,17 @@ MonoBehaviour:
   - {fileID: 1101025416}
   - {fileID: 1635699215}
   - {fileID: 1392346858}
-  jointAngle0: -8
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  jointAngle0: 0
   jointAngle1: 0
   jointAngle2: 0
   jointAngle3: 0
   jointAngle4: 0
   jointAngle5: 0
   endEffectorPosition: {x: 0, y: 0, z: 0}
+  movementSpeed: 1
 --- !u!1 &1150300152
 GameObject:
   m_ObjectHideFlags: 8
@@ -8297,7 +8301,7 @@ ArticulationBody:
   m_Enabled: 1
   serializedVersion: 5
   m_Mass: 1.219
-  m_ParentAnchorPosition: {x: 0.09970008, y: 0.00000008940697, z: 0}
+  m_ParentAnchorPosition: {x: 0.099700086, y: 0.00000008940697, z: 0}
   m_ParentAnchorRotation: {x: 0, y: 0, z: -1.0000002, w: 0}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ForwardKinematicsController : MonoBehaviour
 {
     public Transform[] joints; // Array of the 6 joint Transforms of UR5
+    public LayerMask collisionLayer; // Layer mask for collision detection
 
     // Denavit-Hartenberg Parameters for UR5
     private readonly float[] d = { 0.1625f, 0, 0, 0.1333f, 0.0997f, 0.0996f };
@@ -20,8 +21,45 @@ public class ForwardKinematicsController : MonoBehaviour
     [Range(-360f, 360f)] public float jointAngle5;
 
     private float[] jointAnglesRadians = new float[6];
-
     public Vector3 endEffectorPosition;
+
+    // speed for the trajectory movement
+    public float movementSpeed = 1.0f;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (jointAnglesRadians == null || jointAnglesRadians.Length != 6)
+        {
+            jointAnglesRadians = new float[6];
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Convert joint angles from degrees to radians
+        jointAnglesRadians[0] = jointAngle0 * Mathf.Deg2Rad;
+        jointAnglesRadians[1] = jointAngle1 * Mathf.Deg2Rad;
+        jointAnglesRadians[2] = jointAngle2 * Mathf.Deg2Rad;
+        jointAnglesRadians[3] = jointAngle3 * Mathf.Deg2Rad;
+        jointAnglesRadians[4] = jointAngle4 * Mathf.Deg2Rad;
+        jointAnglesRadians[5] = jointAngle5 * Mathf.Deg2Rad;
+
+        endEffectorPosition = ComputeEndEffectorPosition(jointAnglesRadians);
+        Debug.Log("End-Effector Position: " + endEffectorPosition);
+
+        // Check for collisions
+        if (IsInCollision(endEffectorPosition))
+        {
+            Debug.LogWarning("Computed pose is in collision bounds. Aborting trajectory.");
+        }
+        else
+        {
+            StartCoroutine(MoveToTargetPose(jointAnglesRadians));
+        }
+    }
+
     public Vector3 ComputeEndEffectorPosition(float[] jointAngles)
     {
         Matrix4x4 T = Matrix4x4.identity;
@@ -53,33 +91,32 @@ public class ForwardKinematicsController : MonoBehaviour
         return T;
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    // Check if the computed end-effector position is in collision
+    private bool IsInCollision(Vector3 position)
     {
-
+        // Use a small sphere cast to check for collisions at the target position
+        float radius = 0.05f; // Radius for collision detection
+        return Physics.CheckSphere(position, radius, collisionLayer);
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator MoveToTargetPose(float[] targetJointAngles)
     {
-        // Convert joint angles from degrees to radians
-        jointAnglesRadians[0] = jointAngle0 * Mathf.Deg2Rad;
-        jointAnglesRadians[1] = jointAngle1 * Mathf.Deg2Rad;
-        jointAnglesRadians[2] = jointAngle2 * Mathf.Deg2Rad;
-        jointAnglesRadians[3] = jointAngle3 * Mathf.Deg2Rad;
-        jointAnglesRadians[4] = jointAngle4 * Mathf.Deg2Rad;
-        jointAnglesRadians[5] = jointAngle5 * Mathf.Deg2Rad;
-
-        endEffectorPosition = ComputeEndEffectorPosition(jointAnglesRadians);
-        Debug.Log("End-Effector Position: " + endEffectorPosition);
-
+        float[] currentAngles = new float[jointAnglesRadians.Length];
         for (int i = 0; i < jointAnglesRadians.Length; i++)
         {
-            if (joints[i] != null)
+            currentAngles[i] = jointAnglesRadians[i];
+        }
+
+        float t = 0;
+        while (t < 1)
+        {
+            t += Time.deltaTime * movementSpeed;
+            for (int i = 0; i < joints.Length; i++)
             {
-                joints[i].localRotation = Quaternion.Euler(0, jointAnglesRadians[i] * Mathf.Rad2Deg, 0 );
+                float interpolatedAngle = Mathf.Lerp(currentAngles[i], targetJointAngles[i], t);
+                joints[i].localRotation = Quaternion.Euler(0, interpolatedAngle * Mathf.Rad2Deg, 0);
             }
+            yield return null;
         }
     }
 }
