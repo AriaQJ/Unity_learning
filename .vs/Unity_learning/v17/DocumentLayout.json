@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\Unity\\Projects\\Unity_learning\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|d:\\unity\\projects\\unity_learning\\assets\\scripts\\jointslidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jointslidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|d:\\unity\\projects\\unity_learning\\assets\\scripts\\forwardkinematicscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\forwardkinematicscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\IKRobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\IKRobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\FKRobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\FKRobot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\JointControl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\JointControl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\RosSharpDefinitions\\Robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\RosSharpDefinitions\\Robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|D:\\Unity\\Projects\\Unity_learning\\assets\\gravitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|solutionrelative:assets\\gravitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|D:\\Unity\\Projects\\Unity_learning\\assets\\scripts\\jointslidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jointslidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|D:\\Unity\\Projects\\Unity_learning\\assets\\idgenerater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|solutionrelative:assets\\idgenerater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\Projects\\Unity_learning\\Assets\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\Controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\Controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,6 +43,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ForwardKinematicsController.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Assets\\scripts\\ForwardKinematicsController.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ForwardKinematicsController.cs",
+              "ToolTip": "D:\\Unity\\Projects\\Unity_learning\\Assets\\scripts\\ForwardKinematicsController.cs",
+              "RelativeToolTip": "Assets\\scripts\\ForwardKinematicsController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T04:06:21.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IKRobot.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\IKRobot.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\IKRobot.cs",
+              "ToolTip": "D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\IKRobot.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\IKRobot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T03:52:14.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JointControl.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\JointControl.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\JointControl.cs",
+              "ToolTip": "D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\JointControl.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\JointControl.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T03:50:16.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FKRobot.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\FKRobot.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\FKRobot.cs",
+              "ToolTip": "D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\FKRobot.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\FKRobot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T03:50:13.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Controller.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\Controller.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\Controller.cs",
+              "ToolTip": "D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\Controller.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\Controller.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T03:47:25.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "JointSliderController.cs",
               "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Assets\\scripts\\JointSliderController.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\JointSliderController.cs",
@@ -42,12 +115,11 @@
               "RelativeToolTip": "Assets\\scripts\\JointSliderController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T16:04:14.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T16:04:14.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Robot.cs",
               "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\RosSharpDefinitions\\Robot.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\RosSharpDefinitions\\Robot.cs",
@@ -57,42 +129,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T19:41:44.595Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GravityController.cs",
-              "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Assets\\GravityController.cs",
-              "RelativeDocumentMoniker": "Assets\\GravityController.cs",
-              "ToolTip": "D:\\Unity\\Projects\\Unity_learning\\Assets\\GravityController.cs",
-              "RelativeToolTip": "Assets\\GravityController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T04:41:27.005Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IDGenerater.cs",
-              "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Assets\\IDGenerater.cs",
-              "RelativeDocumentMoniker": "Assets\\IDGenerater.cs",
-              "ToolTip": "D:\\Unity\\Projects\\Unity_learning\\Assets\\IDGenerater.cs",
-              "RelativeToolTip": "Assets\\IDGenerater.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T03:37:56.107Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NewBehaviourScript.cs",
-              "DocumentMoniker": "D:\\Unity\\Projects\\Unity_learning\\Assets\\NewBehaviourScript.cs",
-              "RelativeDocumentMoniker": "Assets\\NewBehaviourScript.cs",
-              "ToolTip": "D:\\Unity\\Projects\\Unity_learning\\Assets\\NewBehaviourScript.cs",
-              "RelativeToolTip": "Assets\\NewBehaviourScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T03:31:28.79Z"
             }
           ]
         }
