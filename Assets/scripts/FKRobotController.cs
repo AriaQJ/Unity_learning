@@ -75,15 +75,14 @@ public class FKRobotController : MonoBehaviour
         {
             dhMatrix *= DHMatrix(jointAngles[i], d[i], a[i], alpha[i]);
         }
-        //coordinate transformation
-        Matrix4x4 T = new Matrix4x4(
-            new Vector4(0, 0, -1, 0),
-            new Vector4(1, 0, 0, 0),  // Second column
-            new Vector4(0, 1, 0, 0), // Third column
-            new Vector4(0, 0, 0, 1)   // Fourth column
-            );
+        Vector4 position = dhMatrix.GetColumn(3);
+        float x = position.y;
+        float y = position.z;
+        float z = -position.x;
 
-        dhMatrix = dhMatrix * T;
+        //dhMatrix = new Vector3(x, y, z);
+
+        //dhMatrix = dhMatrix * T;
 
         //unityMatrix.SetColumn(0, new Vector4(dhMatrix.m00, dhMatrix.m10, -dhMatrix.m20, 0)); 
         //unityMatrix.SetColumn(1, new Vector4(dhMatrix.m01, dhMatrix.m11, -dhMatrix.m21, 0)); 
@@ -91,8 +90,8 @@ public class FKRobotController : MonoBehaviour
         //unityMatrix.SetColumn(3, new Vector4(dhMatrix.m03, dhMatrix.m13, -dhMatrix.m23, 1)); 
 
         // Extract the position from the transformation matrix
-        Vector3 exepectedPosition = dhMatrix.GetColumn(3); // Get the translation vector (fourth column)
-        return exepectedPosition;
+        //Vector3 exepectedPosition = dhMatrix.GetColumn(3); // Get the translation vector (fourth column)
+        return new Vector3 (x,y,z);
     }
 
     private Matrix4x4 DHMatrix(float theta, float d, float a, float alpha)

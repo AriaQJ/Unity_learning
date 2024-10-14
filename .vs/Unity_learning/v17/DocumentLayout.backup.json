@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\Unity\\Projects\\Unity_learning\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|d:\\unity\\projects\\unity_learning\\assets\\scripts\\fkrobotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|D:\\Unity\\Projects\\Unity_learning\\assets\\scripts\\fkrobotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42DA2376-E928-2C87-58AF-3350D09605F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fkrobotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "Assets\\scripts\\FKRobotController.cs",
               "ToolTip": "D:\\Unity\\Projects\\Unity_learning\\Assets\\scripts\\FKRobotController.cs",
               "RelativeToolTip": "Assets\\scripts\\FKRobotController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowD4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwDIAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T20:57:32.958Z",
               "EditorCaption": ""
@@ -76,8 +76,7 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\JointControl.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T03:50:16.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-08T03:50:16.931Z"
             },
             {
               "$type": "Document",
@@ -89,8 +88,7 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\Controller\\Controller.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T03:47:25.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-08T03:47:25.774Z"
             },
             {
               "$type": "Document",
@@ -114,8 +112,7 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.robotics.urdf-importer@90f353e435\\Runtime\\RosSharpDefinitions\\Robot.cs",
               "ViewState": "AgIAAGcAAAAAAAAAAAAswIEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T19:41:44.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T19:41:44.595Z"
             }
           ]
         }

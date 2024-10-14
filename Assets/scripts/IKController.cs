@@ -11,7 +11,7 @@ public class IKController : MonoBehaviour
     private readonly float[] a = { 0, -0.425f, -0.39225f, 0, 0, 0 };
     private readonly float[] alpha = { Mathf.PI / 2, 0, 0, Mathf.PI / 2, -Mathf.PI / 2, 0 };
 
-    public float[] jointAnglesRadians = new float[6];
+    //public float[] jointAnglesRadians = new float[6];
 
     //articulation bodies
     public List<ArticulationBody> articulationBodiesWithXDrive = new List<ArticulationBody>();
@@ -19,7 +19,7 @@ public class IKController : MonoBehaviour
     public Vector3 targetPosition;
     public Vector3 resultingPosition;
     //learning parameters
-    public float learningRate = 0.1f;    
+    public float learningRate = 0.01f;    
     public int maxIterations = 100;      
     public float threshold = 0.01f;      
     void Start()
@@ -39,37 +39,61 @@ public class IKController : MonoBehaviour
         //    float z = -resultingPosition.x;
         //    resultingPosition = new Vector3(x, y, z);
         //IK to get angels
-        float[] jointAngels = InverseKinematics(targetPosition);
+        InverseKinematics(targetPosition);
         //apply to articulation body
-        ApplyJointAngles(jointAngels);
+        //ApplyJointAngles(jointAngels);
+
+        
 
     }
 
-    float[] InverseKinematics(Vector3 targetPosition)
+    void InverseKinematics(Vector3 targetPosition)
     {
+        float step = 0.001f;
         float[] theta = new float[6];
         theta = ReadAngelDegree(articulationBodiesWithXDrive);
+        float[] theta_i = theta;
+        float[] thetaRadians = new float[6];
+        float[] theta_iRadians = new float[6];
 
         for (int iter = 0; iter < maxIterations; iter++)
         {
-            Vector3 currentEndEffectorPos = ComputeEndEffectorPosition(theta);
-
-            Vector3 deltaPos =  targetPosition - currentEndEffectorPos;
-
-            if (deltaPos.magnitude < threshold)
-                break;
-
-            float[,] jacobian = ComputeJacobian(theta);
-            float[] deltaTheta = JacobianPseudoInverse(jacobian, deltaPos);
-
             for (int i = 0; i < theta.Length; i++)
-            {
-                theta[i] += learningRate * deltaTheta[i];
+            {   
+                //degree to rad conversion
+                for (int j = 0; j < theta.Length; j++)
+                {
+                    thetaRadians[j] = theta[j] * Mathf.Deg2Rad;
+                }
+
+                Vector3 currentEndEffectorPos = ComputeEndEffectorPosition(thetaRadians);
+                float distance = Vector3.Distance(targetPosition, currentEndEffectorPos);
+
+                if (distance < threshold)
+                    break;
+                theta_i = theta;
+                theta_i[i] += step;
+
+                //degree to rad conversion
+                for (int j = 0; j < theta.Length; j++)
+                {
+                    theta_iRadians[j] = theta_i[j] * Mathf.Deg2Rad;
+                }
+
+                float newDistance = Vector3.Distance(targetPosition, ComputeEndEffectorPosition(theta_iRadians));
+                
+                thetaRadians[i] -= ((newDistance - distance) / step) * learningRate;
+                
+
+                for (int j = 0; j < theta.Length; j++)
+                {
+                    theta[j] = thetaRadians[j] * Mathf.Rad2Deg;
+                }
+
+                
             }
-
         }
-
-        return theta;
+        ApplyJointAngles(theta);
     }
 
     void ApplyJointAngles(float[] jointAngles)
@@ -77,7 +101,7 @@ public class IKController : MonoBehaviour
         for (int i = 0; i < articulationBodiesWithXDrive.Count; i++)
         {
             ArticulationDrive drive = articulationBodiesWithXDrive[i].xDrive;
-            drive.target = jointAngles[i] * Mathf.Rad2Deg;
+            drive.target = jointAngles[i];
             articulationBodiesWithXDrive[i].xDrive = drive;
         }
     }
@@ -86,13 +110,13 @@ public class IKController : MonoBehaviour
 
     float[] ReadAngelDegree(List<ArticulationBody> ablist)
     {
-        float[] jointAnglesRadians = new float[ablist.Count];
+        float[] jointAngles = new float[ablist.Count];
         for (int i = 0; i < ablist.Count; i++)
         {
-            jointAnglesRadians[i] = ablist[i].xDrive.target;
+            jointAngles[i] = ablist[i].xDrive.target;
             //Debug.Log(ablist[i].xDrive.target);
         }
-        return jointAnglesRadians;
+        return jointAngles;
     }
 
     //float[] InverseKinematics(Vector3 exepectedPosition)
@@ -123,12 +147,11 @@ public class IKController : MonoBehaviour
         //unityMatrix.SetColumn(3, new Vector4(dhMatrix.m03, dhMatrix.m13, -dhMatrix.m23, 1)); 
 
         // Extract the position from the transformation matrix
-        Vector3 exepectedPosition = dhMatrix.GetColumn(3); // Get the translation vector (fourth column)
-        float x = exepectedPosition.y;
-        float y = exepectedPosition.z;
-        float z = -exepectedPosition.x;
-        exepectedPosition = new Vector3(x, y, z);
-        return exepectedPosition;
+        Vector4 position = dhMatrix.GetColumn(3);
+        float x = position.y;
+        float y = position.z;
+        float z = -position.x;
+        return new Vector3(x,y,z);
     }
 
     private Matrix4x4 DHMatrix(float theta, float d, float a, float alpha)
@@ -146,47 +169,5 @@ public class IKController : MonoBehaviour
         T.SetRow(3, new Vector4(0, 0, 0, 1));
 
         return T;
-    }
-    private float[,] ComputeJacobian(float[] jointAngles)
-    {
-        float delta = 0.001f;
-        float[,] jacobian = new float[3, jointAngles.Length];
-
-        Vector3 originalPosition = ComputeEndEffectorPosition(jointAngles);
-
-        for (int i = 0; i < jointAngles.Length; i++)
-        {
-            float originalAngle = jointAngles[i];
-            jointAngles[i] += delta;
-            Vector3 newPosition = ComputeEndEffectorPosition(jointAngles);
-            Vector3 diff = (newPosition - originalPosition) / delta;
-
-            jacobian[0, i] = diff.x;
-            jacobian[1, i] = diff.y;
-            jacobian[2, i] = diff.z;
-
-            jointAngles[i] = originalAngle;
-        }
-
-        return jacobian;
-    }
-
-    private float[] JacobianPseudoInverse(float[,] jacobian, Vector3 deltaPosition)
-    {
-        int rows = jacobian.GetLength(0);
-        int cols = jacobian.GetLength(1);
-        float[] deltaTheta = new float[cols];
-
-        for (int i = 0; i < cols; i++)
-        {
-            float sum = 0;
-            for (int j = 0; j < rows; j++)
-            {
-                sum += jacobian[j, i] * deltaPosition[j];
-            }
-            deltaTheta[i] = sum;
-        }
-
-        return deltaTheta;
     }
 }
