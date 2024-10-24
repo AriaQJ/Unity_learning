@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import socket
 import traceback
+import math
 
 INTERRUPT = False
 THREAD_LOCK = threading.Lock()
@@ -167,11 +168,54 @@ def send_thread(ipaddr='127.0.0.1', bind_port=65403, destination_port=65402):
                             fy = 800  # Focal length in pixels along y
                             cx = IMAGE_WIDTH / 2  # Principal point x-coordinate
                             cy = IMAGE_HEIGHT / 2  # Principal point y-coordinate
+                            # Compute camera coordinates
+                            Xc = (cX - cx) * Z / fx
+                            Yc = (cY - cy) * Z / fy
+                            Zc = Z
+                            # Adjust for coordinate system differences
+                            Yc = -Yc  # Invert Y-axis to match Unity's coordinate system
+
+                            # Compute rotation matrices
+                            theta_x = math.radians(15)  # Rotation around X-axis
+                            theta_y = math.radians(0)  # Rotation around Y-axis
+                            theta_z = math.radians(0)  # Rotation around Z-axis
+
+                            # Rotation matrices
+                            Rx = np.array([
+                                [1, 0, 0],
+                                [0, math.cos(theta_x), -math.sin(theta_x)],
+                                [0, math.sin(theta_x), math.cos(theta_x)]
+                            ])
+
+                            Ry = np.array([
+                                [math.cos(theta_y), 0, math.sin(theta_y)],
+                                [0, 1, 0],
+                                [-math.sin(theta_y), 0, math.cos(theta_y)]
+                            ])
+
+                            Rz = np.array([
+                                [math.cos(theta_z), -math.sin(theta_z), 0],
+                                [math.sin(theta_z), math.cos(theta_z), 0],
+                                [0, 0, 1]
+                            ])
+
+                            # Combined rotation matrix
+                            R = Rz @ Ry @ Rx  # Note the order of rotations
+
+                            # Camera position in Unity
+                            t = np.array([0.0, 1.01, -1.85])  # [x, y, z]
+
+                            # Camera coordinates as a vector
+                            Pc = np.array([Xc, Yc, Zc])  # [Xc, Yc, Zc]
+
                             # Compute world coordinates
-                            X = (cX - cx) * Z / fx
-                            Y = (cY - cy) * Z / fy
+                            Pw = R @ Pc + t  # [Xw, Yw, Zw]
+
+                            # Extract world coordinates
+                            Xw, Yw, Zw = Pw.tolist()
+
                             # Append to list
-                            detected_objects.append({'pixel': (cX, cY), 'world': (X, Y, Z)})
+                            detected_objects.append({'pixel': (cX, cY), 'world': (Xw, Yw, Zw)})
                 # Prepare outgoing message
                 outgoing_message = str(detected_objects).encode()
                 print(detected_objects)
