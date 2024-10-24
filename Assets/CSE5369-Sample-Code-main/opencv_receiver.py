@@ -158,6 +158,9 @@ def send_thread(ipaddr='127.0.0.1', bind_port=65403, destination_port=65402):
                         if M['m00'] != 0:
                             cX = int(M['m10'] / M['m00'])
                             cY = int(M['m01'] / M['m00'])
+                            # Draw a circle at the centroid
+                            cv2.circle(rgb_image, (cX, cY), 5, (255, 0, 0), -1)  # Blue color
+
                             # Get depth value at centroid
                             Z = depth_image[cY, cX]  # depth_image should be in meters
                             # Handle invalid depth values
@@ -219,7 +222,7 @@ def send_thread(ipaddr='127.0.0.1', bind_port=65403, destination_port=65402):
                 # Prepare outgoing message
                 outgoing_message = str(detected_objects).encode()
                 print(detected_objects)
-                # Display the image with bounding boxes
+                # Display the image with bounding boxes and centroids
                 cv2.imshow('Detected Objects', rgb_image)
                 cv2.waitKey(1)
 
