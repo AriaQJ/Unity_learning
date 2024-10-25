@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import socket
 import traceback
 import math
+import json
 
 INTERRUPT = False
 THREAD_LOCK = threading.Lock()
@@ -220,7 +221,7 @@ def send_thread(ipaddr='127.0.0.1', bind_port=65403, destination_port=65402):
                             # Append to list
                             detected_objects.append({'pixel': (cX, cY), 'world': (Xw, Yw, Zw)})
                 # Prepare outgoing message
-                outgoing_message = str(detected_objects).encode()
+                outgoing_message = json.dumps(detected_objects).encode('utf-8')
                 print(detected_objects)
                 # Display the image with bounding boxes and centroids
                 cv2.imshow('Detected Objects', rgb_image)
