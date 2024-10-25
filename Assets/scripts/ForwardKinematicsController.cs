@@ -5,6 +5,7 @@ using UnityEngine;
 public class ForwardKinematicsController : MonoBehaviour
 {
     public Transform[] joints; // Array of the 6 joint Transforms of UR5
+    
     public LayerMask collisionLayer; // Layer mask for collision detection
 
     // Denavit-Hartenberg Parameters for UR5

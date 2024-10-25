@@ -30,8 +30,9 @@ public class IKController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject ball = GameObject.Find("IK_Sephere");
-        targetPosition = ball.transform.position;
+        //GameObject ball = GameObject.Find("IK_Sephere");
+        //targetPosition = ball.transform.position;
+        //
         //jointAnglesRadians = ReadAngelDegree(articulationBodiesWithXDrive);
         //    resultingPosition = ComputeEndEffectorPosition(jointAnglesRadians);
         //    float x = resultingPosition.y;
