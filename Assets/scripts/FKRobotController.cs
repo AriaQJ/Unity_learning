@@ -35,7 +35,7 @@ public class FKRobotController : MonoBehaviour
     void Update()
     {
         // Convert joint angles from degrees to radians
-        jointAnglesRadians[0] = jointAngle0 * Mathf.Deg2Rad;
+        jointAnglesRadians[0] = jointAngle0 * Mathf.Deg2Rad;   
         jointAnglesRadians[1] = jointAngle1 * Mathf.Deg2Rad;
         jointAnglesRadians[2] = jointAngle2 * Mathf.Deg2Rad;
         jointAnglesRadians[3] = jointAngle3 * Mathf.Deg2Rad;
@@ -45,7 +45,7 @@ public class FKRobotController : MonoBehaviour
         // Change joint angles in articulation bodies
         for (int i = 0; i < articulationBodiesWithXDrive.Count; i++)
         {
-            SetTarget(articulationBodiesWithXDrive[i], jointAnglesRadians[i]);
+            SetTarget(articulationBodiesWithXDrive[i], jointAnglesRadians[i]);                             
         }
 
         exepectedPosition = ComputeEndEffectorPosition(jointAnglesRadians);

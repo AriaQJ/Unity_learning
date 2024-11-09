@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/sprint3.unity
+- path: Assets/Scenes/sprint5.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
