@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - robot
+  - RedItem
+  - BlueItem
+  - GreenItem
   layers:
   - Default
   - TransparentFX

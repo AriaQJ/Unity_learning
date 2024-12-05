@@ -8052,7 +8052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voxelGrid: {fileID: 1513229980}
-  startTransform: {fileID: 1926816802}
+  startTransform: {fileID: 866954797}
   goalTransform: {fileID: 1724754117}
   stepSize: 0.3
   maxIterations: 10000
@@ -9561,7 +9561,7 @@ Transform:
   m_GameObject: {fileID: 1724754113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.332, y: 0.635, z: -0.393}
+  m_LocalPosition: {x: 0.425, y: 0.762, z: -0.314}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []

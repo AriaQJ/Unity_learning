@@ -61,9 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\scripts\Sprint5\RRTPathPlanner.cs" />
+    <Compile Include="Assets\scripts\FinalProject\ConveyorBelt.cs" />
     <Compile Include="Assets\scripts\Sprint5\VoxelGridDrawer.cs" />
     <Compile Include="Assets\scripts\Sprint5\AdvancedPlaning.cs" />
     <Compile Include="Assets\scripts\IDGenerater.cs" />
+    <Compile Include="Assets\scripts\FinalProject\PickupTrigger.cs" />
     <Compile Include="Assets\scripts\FKBallController.cs" />
     <Compile Include="Assets\scripts\JointSliderController.cs" />
     <Compile Include="Assets\scripts\ForwardKinematicsController.cs" />
@@ -71,9 +73,13 @@
     <Compile Include="Assets\scripts\PDController.cs" />
     <Compile Include="Assets\scripts\IKController.cs" />
     <Compile Include="Assets\scripts\PythonSocketConnector.cs" />
+    <Compile Include="Assets\scripts\FinalProject\ItemSpawner.cs" />
     <Compile Include="Assets\scripts\GravityController.cs" />
     <Compile Include="Assets\scripts\FKRobotController.cs" />
+    <Compile Include="Assets\scripts\FinalProject\EndEffectorPickUp.cs" />
     <Compile Include="Assets\scripts\UDPReceiver.cs" />
+    <Compile Include="Assets\Prefabs\ItemProperties.cs" />
+    <Compile Include="Assets\scripts\FinalProject\RobotArmController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\robots\URDF\niryo_one\niryo_one_urdf\CMakeLists.txt" />

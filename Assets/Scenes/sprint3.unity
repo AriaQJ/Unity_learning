@@ -6307,7 +6307,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149553364}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 800ba4d6940e8fc498642bd151bd2f37, type: 3}
   m_Name: 
@@ -6321,6 +6321,7 @@ MonoBehaviour:
   - {fileID: 1392346861}
   targetPosition: {x: 0, y: 0, z: 0}
   resultingPosition: {x: 0, y: 0, z: 0}
+  endEffectorTransform: {fileID: 266210885}
   learningRate: 0.2
   maxIterations: 200
   threshold: 0.05
